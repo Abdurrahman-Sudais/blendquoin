@@ -1,3 +1,6 @@
+import { Cycle, Marquee, Stats, Words } from "@/kit/Flow";
+import { AwsSection, ProgressAndDemo } from "@/kit/Sections";
+import { SITE } from "@/kit/site";
 import { Link } from "react-router-dom";
 import { ArrowRight, BadgeCheck, FlaskConical, GitFork, LineChart, ScanSearch, ShieldCheck, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,13 +18,14 @@ export default function HomePage() {
               <span className="h-1.5 w-1.5 rounded-full bg-forest-500" /> Production analytics for cosmetics &amp; personal care
             </div>
             <h1 className="mt-6 text-[42px] font-semibold leading-[1.06] tracking-tight text-navy-900 sm:text-[56px]">
-              Understand What’s Changing Between Your Production Batches.
+              <Words>Understand what’s changing between your production batches.</Words>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-navy-500">
               BlendQuoin connects ingredient lots, manufacturing conditions, and laboratory results to help quality teams identify patterns behind inconsistent production outcomes.
             </p>
+            <p className="mt-4 text-base text-navy-500"><Cycle lead="Built for" items={SITE.cycle} accent="text-forest-600" /></p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button size="lg" asChild><Link to="/register">Request a pilot <ArrowRight /></Link></Button>
+              <Button size="lg" asChild><a href="#demo">Request a demo <ArrowRight /></a></Button>
               <Button size="lg" variant="outline" asChild><Link to="/login">Explore the live demo</Link></Button>
             </div>
             <div className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-navy-100 pt-6">
@@ -43,6 +47,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <Marquee items={SITE.marquee} label={`What ${SITE.name} is built for`} />
+      <Stats items={SITE.stats} />
 
       {/* Problem */}
       <Section className="border-y border-navy-100 bg-white py-16 sm:py-16">
@@ -132,6 +139,10 @@ export default function HomePage() {
           ))}
         </div>
       </Section>
+
+      <AwsSection />
+
+      <ProgressAndDemo />
 
       <CtaBand />
     </>

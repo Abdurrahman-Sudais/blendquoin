@@ -1,4 +1,5 @@
 import { Suspense, useEffect, useState } from "react";
+import { useFlow } from "@/kit/flow";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -16,6 +17,8 @@ const NAV = [
 ];
 
 export function MarketingLayout() {
+  const flowLoc = useLocation();
+  useFlow(flowLoc.pathname + flowLoc.hash);
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
   useEffect(() => {
@@ -37,7 +40,7 @@ export function MarketingLayout() {
           </nav>
           <div className="hidden items-center gap-2 lg:flex">
             <Button variant="ghost" asChild><Link to="/login">Sign in</Link></Button>
-            <Button asChild><Link to="/register">Request a pilot</Link></Button>
+            <Button asChild><Link to="/#demo">Request a demo</Link></Button>
           </div>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
@@ -52,7 +55,7 @@ export function MarketingLayout() {
               </nav>
               <div className="mt-6 flex flex-col gap-2">
                 <Button variant="outline" asChild><Link to="/login">Sign in</Link></Button>
-                <Button asChild><Link to="/register">Request a pilot</Link></Button>
+                <Button asChild><Link to="/#demo">Request a demo</Link></Button>
               </div>
             </SheetContent>
           </Sheet>

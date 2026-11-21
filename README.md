@@ -67,3 +67,9 @@ All AI and data calls go through adapters in `src/services`. When `VITE_USE_AWS=
 | Amazon CloudWatch | Model latency and API metrics | `services/aws/monitoring.ts` |
 
 Until connected, predictions come from a transparent linear surrogate (`services/prediction/simulatedModel.ts`) and assistant/extraction responses are rule-based. Everything simulated is labelled as such in the UI and in exports.
+
+## Website: lead capture, AWS section and motion
+
+- **Demo request** (home page, `#demo`) asks for company size, manufacturer type, primary use case and product families and batch volume; **contact** (`/contact`) has a topic picker. Both post to HubSpot when `VITE_HUBSPOT_*` is set (see `.env.example` and `docs/crm-plan.md`), otherwise they open a pre-filled email to hello@blendquoin.com.
+- **Planned AWS infrastructure** and **progress** sections on the home page are driven by `src/kit/site.ts`.
+- **Motion:** headings, intros and card grids fade, rise and sharpen in sequence on scroll; the hero headline enters word by word with a cycling “Built for” line, followed by a marquee band and count-up figures from the demo data (`src/kit/flow.ts`, `src/kit/Flow.tsx`). Everything is shown immediately for visitors who prefer reduced motion.

@@ -54,7 +54,7 @@ export function CtaBand() {
           <p className="mt-3 max-w-xl text-forest-100/80">Start with one product family and your existing batch records. Most pilots are analysing data within two weeks.</p>
         </div>
         <div className="flex flex-wrap gap-3">
-          <Button size="lg" variant="mint" asChild><Link to="/register">Request a pilot <ArrowRight /></Link></Button>
+          <Button size="lg" variant="mint" asChild><Link to="/#demo">Request a demo <ArrowRight /></Link></Button>
           <Button size="lg" variant="outline" className="border-forest-700 bg-transparent text-white hover:bg-forest-900 hover:text-white" asChild><Link to="/login">Explore the demo</Link></Button>
         </div>
       </div>

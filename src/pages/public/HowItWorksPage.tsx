@@ -35,7 +35,7 @@ export default function HowItWorksPage() {
         <div className="mt-14"><DataFlowIllustration /></div>
       </Section>
       <Section>
-        <SectionHeading eyebrow="Architecture" title="Built on AWS" text="BlendQuoin is designed to run inside a secure AWS architecture, with managed AI services for prediction, language and document understanding." />
+        <SectionHeading eyebrow="Architecture" title="Designed for AWS" text="BlendQuoin is designed to run inside a secure AWS architecture, with managed AI services for prediction, language and document understanding." />
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {AWS.map((a) => (
             <div key={a.t} className="rounded-lg border border-navy-100 p-5">
