@@ -14,7 +14,7 @@ export type Site = {
 };
 
 export const SITE: Site = {
-  name: "BlendQuoin", email: "hello@blendquoin.com", founder: "Temilola Ogunleye",
+  name: "BlendQuoin", email: "temilola@blendquoin.top", founder: "Temilola Ogunleye",
   orgLabel: "Manufacturer type", orgTypes: ["Cosmetics manufacturer", "Personal-care manufacturer", "Contract manufacturer", "Raw-material supplier", "Other"],
   useCases: ["Batch genealogy and traceability", "Viscosity and appearance deviations", "Supplier lot variation", "Quality investigations", "Reports and documentation", "Other"],
   topics: ["Pilot programme", "Pricing", "Technical / AWS deployment", "Data and integrations", "Partnership", "Other"],

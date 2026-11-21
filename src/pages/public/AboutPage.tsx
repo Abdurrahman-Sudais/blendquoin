@@ -2,7 +2,8 @@ import { CtaBand, PageHero, Section, SectionHeading } from "@/components/marketi
 
 const FOUNDERS = [
   { name: "Temilola Ogunleye", role: "Founder", initials: "TO", bio: "Leads BlendQuoin’s vision and product direction, focused on giving cosmetics quality teams the connected evidence they need to explain batch variation." },
-  { name: "Obinna Nwosu", role: "Co-founder", initials: "ON", bio: "Leads the platform and data foundations behind BlendQuoin — from batch genealogy to the prediction and assistant services." },
+  { name: "Obinna Nwosu", role: "Co-founder", initials: "ON", bio: "Leads manufacturer partnerships and pilots, working with quality and production teams to shape how batch investigations run in BlendQuoin." },
+  { name: "Kelechi Nnaji", role: "CTO", initials: "KN", bio: "Leads engineering and the AWS platform behind BlendQuoin — batch genealogy, the deviation prediction models, document extraction and the assistant services." },
 ];
 
 export default function AboutPage() {
@@ -21,7 +22,7 @@ export default function AboutPage() {
       </Section>
       <Section className="bg-mint-50/60">
         <SectionHeading center eyebrow="Leadership" title="Founders" />
-        <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-3">
           {FOUNDERS.map((f) => (
             <div key={f.name} className="rounded-2xl border border-navy-100 bg-white p-8">
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-forest-900 text-xl font-semibold text-mint-300">{f.initials}</div>

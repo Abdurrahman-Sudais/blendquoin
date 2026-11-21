@@ -4,7 +4,7 @@
 
 AI-powered production analytics for cosmetics and personal-care manufacturers. BlendQuoin connects ingredient lots, supplier information, manufacturing conditions and laboratory measurements to help quality teams investigate inconsistent batches and anticipate deviations in viscosity and appearance.
 
-Founder: Temilola Ogunleye · Co-founder: Obinna Nwosu
+Founder: Temilola Ogunleye · Co-founder: Obinna Nwosu · CTO: Kelechi Nnaji
 
 ## Run it
 
@@ -70,6 +70,6 @@ Until connected, predictions come from a transparent linear surrogate (`services
 
 ## Website: lead capture, AWS section and motion
 
-- **Demo request** (home page, `#demo`) asks for company size, manufacturer type, primary use case and product families and batch volume; **contact** (`/contact`) has a topic picker. Both post to HubSpot when `VITE_HUBSPOT_*` is set (see `.env.example` and `docs/crm-plan.md`), otherwise they open a pre-filled email to hello@blendquoin.com.
+- **Demo request** (home page, `#demo`) asks for company size, manufacturer type, primary use case and product families and batch volume; **contact** (`/contact`) has a topic picker. Both post to HubSpot when `VITE_HUBSPOT_*` is set (see `.env.example` and `docs/crm-plan.md`), otherwise they open a pre-filled email to temilola@blendquoin.top.
 - **Planned AWS infrastructure** and **progress** sections on the home page are driven by `src/kit/site.ts`.
 - **Motion:** headings, intros and card grids fade, rise and sharpen in sequence on scroll; the hero headline enters word by word with a cycling “Built for” line, followed by a marquee band and count-up figures from the demo data (`src/kit/flow.ts`, `src/kit/Flow.tsx`). Everything is shown immediately for visitors who prefer reduced motion.

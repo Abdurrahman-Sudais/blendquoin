@@ -34,7 +34,7 @@ export async function signUp(input: { name: string; email: string; organisation:
 }
 
 export function demoUser(): SessionUser {
-  const user: SessionUser = { name: "Adaeze Okafor", email: "demo@blendquoin.app", role: "Quality Manager", organisation: "Demo Cosmetics Ltd", initials: "AO" };
+  const user: SessionUser = { name: "Adaeze Okafor", email: "demo@blendquoin.top", role: "Quality Manager", organisation: "Demo Cosmetics Ltd", initials: "AO" };
   localStorage.setItem(KEY, JSON.stringify(user));
   return user;
 }
